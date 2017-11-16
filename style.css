@@ -1,0 +1,71 @@
+*{margin: 0;padding: 0;}
+a{text-decoration: none;}
+body{
+    background: grey url(./wall.jpg) no-repeat center center;
+    background-size: cover;
+}
+kbd{
+    width: 4em;height: 4em;
+    display: inline-block;/*<kbd>是行内元素，但只有块元素才可以设宽高*/
+    text-transform: uppercase;/*大小写转换，这个是把小写转大写*/
+    position: relative;
+}
+kbd > button{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+kbd:hover > button{
+    display: inline-block;/*为了使用内联元素的居中方法*/
+}
+kbd > button:hover{
+    cursor: pointer;
+    display: inline-block;  
+}
+    
+main{
+    text-align: center;/*行内元素居中，要在父元素上加center*/
+    display: flex;
+    justify-content: center;
+    align-items: center; /*绝对居中*/
+    height: 100vh;/*让它和视窗一样高*/
+}
+#mainM{
+    display: inline-block; 
+    background: rgba(255,255,255,0.2);
+    border-radius: 15px;
+}
+#mainM > div:nth-child(2){
+    margin-left: -12px;
+}
+#mainM > div:nth-child(3){
+    margin-left: -74px;
+}
+#mainM .key{
+    width:55px;
+    height:42px;
+    background:  linear-gradient(to bottom, #292929 0%,#111111 100%);
+    border-radius: 7px;
+    color: #d1d1d1;
+    box-shadow:0 1px 1px 2px #3a3a3a,0 2px 0 2px #080808,0 3px 0 3px #1f2020;
+    font-family: Helvetica;
+    margin:0 5px;
+    font-size: 14px;
+    position: relative;
+}
+#mainM .row{
+    margin: 20px;
+}
+#mainM .icona{
+    width:15px;
+    height: 15px;
+    position: absolute;
+    left:5px;
+    bottom:4px;
+}
+#mainM .text{
+    position: absolute;
+    left:5px;
+    top:4px;
+}
