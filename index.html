@@ -75,7 +75,7 @@
       var keyP = kk['key']
       var website = hash[keyP]
       //location.href = 'http://'+website 在当前页面打开网址，但希望新开页面打开
-      window.open('http://'+website,'_blank')
+      window.open(website,'_blank')
   }
   }
   function getfromLocalStorage(name){
@@ -94,7 +94,7 @@
     var imgM = tag('img')
     imgM.className = 'icona'    
     if(domain){
-        imgM.src = 'http://'+domain+'/favicon.ico'
+        imgM.src = domain+'/favicon.ico'
     }else{
         imgM.src = '//i.loli.net/2017/11/15/5a0c61e793cf2.png'
     } 
@@ -113,9 +113,9 @@
         var key = button2['id']//获取字母
         var x = prompt('输入你想要的网址吧')
         hash[key] = x //赋新的网址
-        img2.src = 'http://'+x+'/favicon.ico' //图标随着网址变化而变
+        img2.src = x+'/favicon.ico' //图标随着网址变化而变
         img2.onerror = function(bb){
-        bb.target.src = 'https://i.loli.net/2017/11/15/5a0c61e793cf2.png'
+        bb.target.src = '//i.loli.net/2017/11/15/5a0c61e793cf2.png'
         }
         localStorage.setItem('cundang',JSON.stringify(hash)) //保存在浏览器
     }
