@@ -29,7 +29,13 @@ main{
     display: flex;
     justify-content: center;
     align-items: center; /*绝对居中*/
+    flex-direction: column;
     height: 100vh;/*让它和视窗一样高*/
+}
+.tip{
+    margin-top:20px;
+    color:#525353;
+    font-size:14px;
 }
 #mainM{
     display: inline-block; 
